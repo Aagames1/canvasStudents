@@ -1,7 +1,9 @@
 from canvasapi import Canvas 
 from canvasapi.exceptions import CanvasException
+import time
+# to be used
 API_URL = "https://mcpsmd.instructure.com/"
-API_KEY = "[insert key here]" # obviously needs to be changed when used
+API_KEY = "[API_KEY HERE]" 
 canvas = Canvas(API_URL, API_KEY)
 
 def getStudents(courseID):
@@ -10,17 +12,31 @@ def getStudents(courseID):
   studentsList = []
   
   for user in users:
-    studentsList.append(user.name)
+    name = user.name
+    name = name[:-10]
+    studentsList.append(name)
     
   return studentsList
 
 
-# this part will likely be changed to eliminate the need for manual input
-print("Enter the course ID of the course you want to obtain a list of all students from: ")
-ID = input()
+while True:
+  print("Enter the course ID of the course you want to obtain a list of all students from: ")
+  ID = input()
 
-try:
-    print(getStudents(ID))
-except CanvasException as e:
-    print("An error has occured. Check to see if the ID was valid.")
+  try:
+    nameList = getStudents(ID)
+    print("Student Data Saved!")
+    print("Input '1' to print the list. Input '2' to convert the list to a .txt file. Input anything else to end the program.")
+    x = input()
+    if(x == "1"):
+      print(nameList)
+    elif (x == "2"):
+      with open('output.txt', 'w') as file:
+        for item in nameList:
+            file.write('%s\n' % item)
+    else:
+      exit()
+  
+  except CanvasException as e:
+    print("An error has occured. Check to see if the ID and API Key were valid.")
 
