@@ -1,6 +1,5 @@
 from canvasapi import Canvas 
 from canvasapi.exceptions import CanvasException
-import time
 API_URL = "https://mcpsmd.instructure.com/"
 API_KEY = "[INSERT KEY HERE]" 
 canvas = Canvas(API_URL, API_KEY)
