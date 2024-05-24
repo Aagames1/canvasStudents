@@ -16,6 +16,9 @@ def getStudents(courseID):
     
   return studentsList
 
+def getCourseName(courseID):
+  course = canvas.get_course(courseID)
+  return course.name
 
 while True:
   print("\nEnter the course ID of the course you want to obtain a list of all students from: ")
@@ -28,6 +31,8 @@ while True:
     x = input()
     if(x == "1"):
       with open('output.txt', 'w') as file:
+        file.write(getCourseName(ID))
+        file.write('\n')
         for item in nameList:
             file.write('%s\n' % item)
     else:
