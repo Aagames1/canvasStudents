@@ -21,7 +21,6 @@ def getCourseName(courseID):
   course = canvas.get_course(courseID)
   return course.name
 
-# userID = 36343
 def getCourses(userID):
   user = canvas.get_user(userID)
   courseList = user.get_courses(enrollment_status='active')
