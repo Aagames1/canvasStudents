@@ -3,7 +3,7 @@ code for teachers/students to use in order to compile a list of students in a cl
 
 able to run through shell, allowing it to be used by java applications. run using the command: 
 
-```python main.py <userID> <courseID>```
+```python main.py <canvasID> <courseID>```
 
 ignore the main_variants
 
