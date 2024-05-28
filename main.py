@@ -32,6 +32,6 @@ def getCourses(userID):
       print("Courses saved!")
 
 
-# getCourses()
-# getStudents()
+# getCourses(123456)
+# getStudents(98765)
   
