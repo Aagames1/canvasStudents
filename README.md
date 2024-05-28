@@ -1,9 +1,7 @@
 # canvasStudents
 code for teachers/students to use in order to compile a list of students in a class using Canvas API. to be used as part of another project.
 
-"main_better" is the best version, as it can print all of a users courses
-
-"main" exits after returning one file, "main_variant" does not, and allows repeated use. 
+ignore the main_variants
 
 
 make sure to do  ```pip install canvasapi``` before using
