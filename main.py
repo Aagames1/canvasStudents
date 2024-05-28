@@ -27,6 +27,7 @@ def getCourses(userID):
     try:
       for course in courseList:
         file.write('%s\n' % course)
+      print("Courses saved!")
     except Exception as e:
       print("Courses saved!")
 
