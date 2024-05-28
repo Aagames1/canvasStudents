@@ -1,7 +1,7 @@
 # canvasStudents
 code for teachers/students to use in order to compile a list of students in a class using Canvas API. to be used as part of another project.
 
-able to run through shell, allowing it to be used by java applications. 
+able to run through shell, allowing it to be used by java applications. run using the command: 
 
 ```python main.py <userID> <courseID>```
 
